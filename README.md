@@ -1,8 +1,14 @@
 # EU Long-term Dataset with Multiple Sensors for Autonomous Driving 
 
-<img src="images/utbm_logo.png" align="right" /><img src="images/epan_logo.png" align="right" />[Zhi Yan](https://yzrobot.github.io/), [Li Sun](https://sites.google.com/site/lisunspersonalsite/), [Tomas Krajnik](http://labe.felk.cvut.cz/~tkrajnik/), and [Yassine Ruichek](https://www.researchgate.net/profile/Yassine_Ruichek)
+[Zhi Yan](https://yzrobot.github.io/), [Li Sun](https://sites.google.com/site/lisunspersonalsite/), [Tomas Krajnik](http://labe.felk.cvut.cz/~tkrajnik/), and [Yassine Ruichek](https://www.researchgate.net/profile/Yassine_Ruichek)
 
 [![Build Status](https://travis-ci.org/epan-utbm/utbm_robocar_dataset.svg?branch=baselines)](https://travis-ci.org/epan-utbm/utbm_robocar_dataset)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+## Issues
+
+* Radar data: [13](https://github.com/epan-utbm/utbm_robocar_dataset/issues/13)
+* Vehicle position ground-truth provided by GPS-RTK: [1](https://github.com/epan-utbm/utbm_robocar_dataset/issues/1), [7](https://github.com/epan-utbm/utbm_robocar_dataset/issues/7)
 
 ## Dataset
 
@@ -15,7 +21,7 @@ We forked the implementation of the following state-of-the-art methods and exper
 * Pose Estimation: https://github.com/tu-darmstadt-ros-pkg/hector_localization
 * Lidar odometry: https://github.com/laboshinl/loam_velodyne
 * Lidar odometry: https://github.com/RobustFieldAutonomyLab/LeGO-LOAM
-* Visual odometry: https://github.com/raulmur/ORB_SLAM2
+* To be continued ...
 
 All users are more than welcome to commit their results.
 
@@ -35,12 +41,12 @@ roslaunch utbm_pose_estimation.launch bag:=path_to_your_rosbag
 
 ### Evaluation
 
-First of all, you should have something like this:
+First of all, you should have something like this:https://yzrobot.github.io/
 
 ![hector_rosgraph.png](images/hector_rosgraph.png)
 
 
-Then, ```/fix/pose```([geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)) is the estimated robot pose (6DOF) based on the GPS data.
+Then, ```/fix/pose```([geometry_msgs/PoseStamped](http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html)) ihttps://yzrobot.github.io/s the estimated robot pose (6DOF) based on the GPS data.
 
 ## loam_velodyne (lidar odometry)
 
@@ -67,6 +73,8 @@ Single Velodyne HDL-32E (left)
 ![loam_velodyne_20180719.png](baselines/results/loam_velodyne/loam_velodyne_20180719.png)
 
 ## LeGO-LOAM (lidar odometry)
+
+1. Minor changes w.r.t. LeGO-LOAM ([Issue #9](https://github.com/epan-utbm/utbm_robocar_dataset/issues/9), thanks to robot54)
 
 ![lego_map.png](images/lego_map.png)
 
